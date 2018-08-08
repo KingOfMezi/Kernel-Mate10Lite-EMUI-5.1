@@ -1,0 +1,158 @@
+
+Construir Kernel-Build kernel-Huawei
+___________________________________________________________________
+
+1: Clonar Kernel Mate 10 Lite EMUI 5.1 Stock 
+
+Nos Dirigimos a esta carpeta
+Abrir EL Terminal y Escribir este codigo:
+
+cd /home/kingofmezi/android/kernel/huawei    
+
+Ingresamos al modo root codigo:
+
+sudo su
+
+Contraseña: teamotamto
+
+Escribimos este codigo:
+
+ls
+
+Nos tiene Que aparecer esta carpeta: out
+
+lo verificamos 
+
+Ahora usaremos este codigo para clonar el kernel
+
+git clone https://github.com/KingOfMezi/Kernel-Mate10Lite-EMUI-5.1.git
+
+Comenzara a descargar el kernel stock del mate 10 lite
+pesa al rededor de 700MB hasta 800MB
+la descarga dependera de la velocidad de tu internet
+solo se paciente y tomece algun refresco de la nevera.
+
+2:Ahora Moveremos Algunos Archivos Como: gcc-linaro-5.5.0-2017.10-x86_64_aarch64-linux-gnu/bin
+y Haremos algunos ajuztes para compilar el kernel mediante build.sh
+y daremos todos los permisos necesarios a 2 o 3 archivos ejecutables
+para no tener ningun error al momento de la compilacion cruzada.
+
+
+Escribimos este codigo en el terminal:
+
+cd /home/kingofmezi/Descargas
+
+Escribimos este codigo:
+
+ls
+
+Escribimos este codigo:
+
+mv prebuilts /home/kingofmezi/android/kernel/huawei/Kernel-Mate10Lite-EMUI-5.1
+
+Escribimos este codigo:
+
+cd /home/kingofmezi/android/kernel/huawei/Kernel-Mate10Lite-EMUI-5.1
+
+Escribimos este codigo:
+
+ls
+
+Escribimos este codigo:
+
+chmod a=rwx Makefile
+
+Escribimos este codigo:
+
+chmod a=rwx build.sh
+
+Escribimos este codigo:
+
+chmod a=rwx clean.sh
+
+Escribimos este codigo:
+chmod a=rwx README_Version.txt
+
+3: Una ves ya realizado todo
+comenzaremos a compilar el kernel mediante este codigo
+
+./build.sh
+
+la compilacion cruzada dependera el tiempo de tu pc
+en mi caso yo tengo un AMD-FX8320+NVIDIA-GT740 2GB DRRR5+16RAM
+y me demora al rededor de 15 a 20 minutos 
+
+si en tu caso es diferente y tienes una pc de bajos recursos
+te demorara al rededor de 45 minutos hasta 1 hora de promedio,a veces hasta 2horas.
+
+
+4:¡Éxito! ¿Qué es lo siguiente? 
+
+!Lo has hecho! Bienvenido al club élite de autoconstructores. Has construido tu sistema operativo desde cero, desde cero. Eres el maestro / dueño de tu propio dominio ... y ojalá hayas aprendido un poco en el camino y también te hayas divertido.
+
+5: para ver donde se encuentra el:
+
+image
+image.gz
+
+te puedes guiar mediante esta ruta:
+
+Carpeta Personal/android/kernel/huawei/Kernel-Mate10Lite-EMUI-5.1/out/arch/arm64/boot
+
+o tambien lo puedes ver de una manera rapida mediante este codigo:
+
+cd /home/kingofmezi/android/kernel/huawei/Kernel-Mate10Lite-EMUI-5.1/out/arch/arm64/boot
+
+luego escribir este codigo:
+
+ls
+
+luego escribir este codigo para obtener Image:
+
+mv Image /home/kingofmezi/Desktop
+
+luego escribir este codigo para obtener Image.gz:
+
+mv Image.gz /home/kingofmezi/Desktop
+
+ahora para dar todos los permisos escribimos este codigo:
+
+cd /home/kingofmezi/Desktop
+
+chmod a=rwx Image 
+
+chmod a=rwx Image.gz
+
+
+ya finalizado,estas anciosos de probarlo???
+deseas hacerlo este archivo flasheable se pueden guiar
+mediante este publicacion,esta muy bien explicado
+[DEV][TEMPLATE] AnyKernel2-[Flashable Zip]
+https://forum.xda-developers.com/showthread.php?t=2670512
+___________________________________________________________________
+
+-para limpiar la compilacion cruzada que hemos echo y no tener
+ningun problema,ya que quedan residuos en la carpeta out...
+usamos este codigo:
+
+cd /home/kingofmezi/android/kernel/huawei/Kernel-Mate10Lite-EMUI-5.1
+
+escribimos este codigo:
+
+ls
+
+escribimos:
+
+./clean.sh
+
+___________________________________________________________________
+
+para compilar nuevamente el kernel
+ya no es necesario hacer todos los pasos de arriba
+ya que todo esta correctamente configurado
+lo puedes modificar al gusto y compilarlo nuevamente
+mediante este codigo:
+
+./build.sh
+
+___________________________________________________________________
