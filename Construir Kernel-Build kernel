@@ -31,6 +31,9 @@ Welcome to VirtualBox.org!: https://www.virtualbox.org/
 Huawei-Construir Kernel-Build kernel: https://youtu.be/Vn-xQQ5NB7w
 Huawei opensource web all: https://consumer.huawei.com/en/opensource/detail/
 Virtualbox 4.3,12 by KingOfMezi: http://wirecellar.com/ycU
+(If you have a problem with virtualbox that does not start you can use this guide works very well)
+Si tienes un problema con virtualbox que no se inicia,Puedes usar esta guía funciona muy bien.
+https://stackoverflow.com/questions/27082252/virtualbox-cannot-access-the-kernel-driver
 ___________________________________________________________________
 
 1: Clonar Kernel Mate 10 Lite EMUI 5.1 Stock 
